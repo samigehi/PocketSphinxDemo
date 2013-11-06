@@ -1,0 +1,59 @@
+// for more help http://swathiep.blogspot.com/2011/02/offline-speech-recognition-with.html 
+// thanx to Sumit
+ 
+ Offline Speech Recognition With PocketSphinx
+Follow the below steps to run AndroidPocketSphinxDemo project provided by Sphinx community:
+
+1. Download the latest version of sphinxbase from the following link:
+    http://sourceforge.net/projects/cmusphinx/files/sphinxbase/
+    Extract the downloaded tar file and save it under a folder called 'sphinx' .
+
+2. Download the latest version of pocketsphinx from the link:
+    http://sourceforge.net/projects/cmusphinx/files/pocketsphinx
+    Extract the downloaded tar file and save it under a folder named 'sphinx' .
+
+3. After extracting sphinxbase and pocketsphinx, you will have to install both 
+    in your system through the following commands,
+
+        cd <sphinxbase path or pocketsphinx path>
+        ./configure
+        make
+        make install
+
+4. Make sure that you have installed Android NDK, if not installed, refer
+    the link:
+    http://developer.android.com/sdk/ndk/index.html
+
+5. Download AndroidPocketSphinxDemo project from the link:
+    https://github.com/cjac/cmusphinx/tree/trunk/PocketSphinxAndroidDemo
+
+6. Copy the following files from <pocketsphinx path>/swig/edu/cmu/pocketsphinx
+    to PocketSphinxDemo/jni/edu.cmu.pocketsphinx. The required files are:
+
+        Config.java
+        Decoder.java
+        Hypothesis.java
+        pocketsphinx.java
+        pocketsphinxJNI.java
+        SegmentIterator.java
+
+
+
+7. Specify the path of 'sphinx' folder containing pocketsphinx and sphinxbase in
+    'Android.mk' file. Then do Ndk build.
+
+8. In the emulator/device in which you are going to install the project, create the
+    folder called 'edu.cmu.pocketsphinx' under the path '/sdcard/Android/data/' .
+   
+9. Under the folder 'edu.cmu.pocketsphinx', create two folders called 'hmm' and
+    'lm'. Under both 'hmm' and 'lm' create folder called 'en_US'.
+
+10. Inside '/sdcard/Android/data/edu.cmu.pocketsphinx/hmm/en_US', copy the
+      folder 'hub4wsj_sc_8k' present under   
+      <pocketsphinx path>/model/hmm/en_US
+
+11. Inside  '/sdcard/Android/data/edu.cmu.pocketsphinx/lm/en_US', copy the files
+      'hub4.5000.dic' and 'hub4.5000.DMP' present under
+      <pocketsphinx path>/model/lm/en_US
+
+12. Now the project is ready to run on the emualtor/device. 

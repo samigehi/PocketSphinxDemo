@@ -1,0 +1,8 @@
+set solib-search-path /home/zach/Android/PocketSphinx/obj/local/armeabi
+directory /home/zach/android-ndk-r4b/build/platforms/android-8/arch-arm/usr/include
+directory /home/zach/Android/PocketSphinx/jni
+directory /home/zach/Android/PocketSphinx/jni
+directory /home/zach/Android/PocketSphinx/jni
+directory /home/zach/Android/PocketSphinx/jni
+directory /home/zach/Android/PocketSphinx/jni
+directory /home/zach/Android/PocketSphinx/jni
