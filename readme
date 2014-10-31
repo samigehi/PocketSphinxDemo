@@ -1,5 +1,8 @@
-// for more help http://swathiep.blogspot.com/2011/02/offline-speech-recognition-with.html 
-// thanx to Sumit
+/* 
+ *   This is my University Project 
+ *   Urdu based Offline Speech recognition for Smartphones (Android Platform)
+ *   Copyrights by Sumeet Gehi 2012
+ */
  
  Offline Speech Recognition With PocketSphinx
 Follow the below steps to run AndroidPocketSphinxDemo project provided by Sphinx community:
